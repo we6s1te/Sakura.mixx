@@ -1025,13 +1025,13 @@ function addPackToCart(product, pack) {
 
 
 function changeQty(id, delta) {
-  const item = cart.find(i => i.id === id);
+  const item = cart.find(i => String(i.id) === String(id));
   if (!item) return;
 
   item.qty += delta;
 
   if (item.qty <= 0) {
-    cart = cart.filter(i => i.id !== id);
+    cart = cart.filter(i => String(i.id) !== String(id));
   }
 
   saveCart();
@@ -1253,3 +1253,4 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("closeCart")?.addEventListener("click", closeCart);
   document.getElementById("checkout")?.addEventListener("click", sendToWhatsApp);
 });
+
