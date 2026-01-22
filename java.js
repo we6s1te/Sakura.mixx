@@ -460,7 +460,7 @@ const PRODUCTS = [
     category: "snacks"
   },
   {
-    id: 52,
+    id: 53215465,
     title: "Жаренная рыба 1 кг",
     description: "",
     price: 4200,
@@ -1253,4 +1253,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("closeCart")?.addEventListener("click", closeCart);
   document.getElementById("checkout")?.addEventListener("click", sendToWhatsApp);
 });
+
 
